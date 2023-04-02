@@ -81,12 +81,7 @@ let sumFruits = 0;
 for (let product of products) {
   if (product.category === "fruits") sumFruits = sumFruits + product.price;
 }
-console.log(sumFruits);
-
-const fruitsFilter = () => {
-  return products.category === "fruits";
-};
-console.log(products.filter(fruitsFilter));
+console.log("zad 3=" + sumFruits);
 
 // 4. Napisz funkcje sumProducts, ktora przyjmie tablice obiektow products z zadania 3, a nastepnie zwroci sume wszystkich produktow
 
@@ -94,4 +89,16 @@ let sumProducts = 0;
 for (let product of products) {
   sumProducts = sumProducts + product.price;
 }
-console.log(sumProducts);
+console.log("zad 4=" + sumProducts);
+//////////////////////////
+
+let sumFruits2 = 0;
+let filterFruits = products.filter(
+  (products2) => products2.category === "fruits"
+);
+
+for (let product2 of filterFruits) {
+  console.log(product2.price);
+  sumFruits2 = sumFruits2 + product2.price;
+}
+console.log("filter" + sumFruits2);
