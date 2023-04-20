@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.orderTable {
+  padding: 10px;
+  tr {
+    height: 50px;
+    border: 1px solid #000000;
+  }
+
+  td,
+  th {
+    width: 300px;
+  }
+
+  th,
+  tr,
+  td {
+    background-color: rgb(227, 232, 236);
+    padding: 8px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+  }
+}
