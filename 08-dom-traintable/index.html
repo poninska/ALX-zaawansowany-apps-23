@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="searchSection">
+        <form id="searchForm">
+          <label for="searchInput" id="searchLabel">Wpisz nazwę pociągu</label>
+          <input type="text" id="searchInput" />
+          <input type="submit" class='searchBtn'value="Szukaj" />
+        </form>
+        <form id="addForm">
+          <ul>
+            <li>
+              <label for="fromInput" id="searchLabel">Stacja początkowa</label>
+              <input type="text" id="fromInput" />
+            </li>
+
+            <li>
+              <label for="toInput" id="searchLabel">Stacja docelowa</label>
+              <input type="text" id="toInput" />
+            </li>
+
+            <li>
+              <label for="departureInput" id="searchLabel"
+                >Godzina odjazdu</label
+              >
+              <input
+                type="time"
+                id="departureInput"
+                min="00:00"
+                max="23:59"
+                required
+              />
+            </li>
+
+            <li>
+              <label for="dateInput" id="searchLabel">Data</label>
+              <input type="date" id="dateInput" />
+            </li>
+
+            <li>
+              <label for="nameInput" id="searchLabel">Nazwa</label>
+              <input type="text" id="nameInput" />
+            </li>
+            <li>
+            </ul>
+
+              <input type="submit" class="addBtn" value="Dodaj połączenie" />
+            </li>
+            <ul>
+            <li>
+              <label for="selectCity" id="selectCityLabel"
+                >Wybierz miasto</label
+              >
+
+              <select name="selectCity" id="selectCity">
+                <option value="">--Please choose an option--</option>
+              </select>
+            </li>
+            <li>
+              <label for="selectDate" id="selectDateLabel">Wybierz datę</label>
+
+              <select name="selectDate" id="selectDate">
+                <option value="">--Please choose an option--</option>
+              </select>
+            </li>
+          </ul>
+        </form>
+      </section>
+      <section class="connectionsTable">
+        <table id="connectionsTable">
+          <thead>
+            <tr>
+              <th>Z</th>
+              <th>Do</th>
+              <th>Godzina</th>
+              <th>Data</th>
+              <th>Nazwa</th>
+            </tr>
+          </thead>
+          <tbody id="connectionsTableBody"></tbody>
+        </table>
+        <button id="exitSearch">Powrót</button>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
